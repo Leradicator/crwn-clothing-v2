@@ -9,9 +9,9 @@ import {
 import SignUpForm from '../../components/sign-up-form/sign-up-form.component';
 import SignInForm from '../../components/sign-in-form/sign-in-form.component';
 
-import './sign-in.styles.scss';
+import './authentication.styles.scss';
 
-const SignIn = () => {
+const Authentication = () => {
   useEffect(async () => {
     const response = await getRedirectResult(auth);
     
@@ -24,7 +24,7 @@ const SignIn = () => {
   return (
     <div>
       <h1>Sign In Page</h1>
-      <div className='sign-in-and-up-forms'>
+      <div className='authentication-container'>
         <SignInForm />
         <SignUpForm />
       </div>
@@ -32,4 +32,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default Authentication;
