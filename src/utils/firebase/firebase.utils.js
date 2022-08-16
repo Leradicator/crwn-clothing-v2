@@ -33,10 +33,11 @@ export const signInWithGoogleRedirect = () => signInWithRedirect(auth, googlePro
 
 export const signInWithFormInput = async (email, password) => {
   const userCredential = await signInWithEmailAndPassword(auth, email, password);
-  const user = userCredential.user;
-  console.log(user);
+  const userDocRef = doc(db, 'users', userCredential.user.uid);
 
-  return userCredential;
+  const userSnapshot = await (await getDoc(userDocRef)).data();
+
+  return {...userCredential, user: {...userCredential.user, displayName: userSnapshot.displayName}};
 };
 
 export const db = getFirestore();
