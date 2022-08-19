@@ -3,19 +3,12 @@ import { useState } from "react";
 import FormInput from "../form-input/form-input.component";
 import Button from '../button/button.component';
 
-<<<<<<< HEAD
-import {
-  signInAuthUserWithEmailAndPassword,
-  signInWithGooglePopup,
-} from '../../utils/firebase/firebase.utils';
-=======
 import { 
     signInWithFormInput,
     signInWithGooglePopup,
     signInWithGoogleRedirect,
     signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils";
->>>>>>> my-lesson-11
 
 import './sign-in-form.styles.scss';
 
