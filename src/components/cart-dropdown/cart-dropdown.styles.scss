@@ -18,6 +18,7 @@
 
     .cart-items {
         height: 240px;
+        overflow-y:scroll;
         display: flex;
         flex-direction: column;
         padding: 20px;
